@@ -79,6 +79,7 @@ img {
 .sa__title {
   line-height: 1;
   font-size: var(--fs-48);
+  text-align: left;
 }
 
 .sa__message {
@@ -99,6 +100,33 @@ img {
 /* ================== */
 /* Buttons & inputs */
 /* ================== */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 0.5em;
+  background: var(--clr-grey);
+  color: var(--clr-dark-blue);
+  padding: 0.6em 1em;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-white);
+  background: var(--clr-dark-blue);
+}
+
+.btn.btn--sa {
+  background: var(--clr-orange);
+  color: var(--clr-white);
+}
+
+.btn.btn--sa:hover,
+.btn.btn--sa:focus {
+  background: var(--clr-orange-hover);
+}
 
 /* ================== */
 /* Utility styles */
@@ -108,9 +136,98 @@ img {
   font-weight: var(--fw-bold);
 }
 
+.tablet-img,
+.desktop-img {
+  display: none;
+}
+
+.wrapper {
+  margin: 1.5em 0;
+
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 1.5em;
+}
+
 /* ================== */
 /* SECTIONS */
 /* ================== */
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  margin-top: 4em;
+}
+
+/* Section A */
+.sa__copy-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sa__copy-area .copy-text {
+  margin-top: 2em;
+  text-align: left;
+}
+
+.sa__button-area {
+  margin-top: 2em;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sa__message {
+  margin-right: 1em;
+}
+
+.sa__image-area {
+  margin-top: 4em;
+}
+
+.sa__image-area .mobile-img {
+  border-radius: 1em;
+  margin-left: 1.5em;
+}
+
+/* Section B */
+.section-b {
+  margin-top: 1.5em;
+}
+
+.sb__image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+
+  margin-left: -1.5em;
+  margin-right: 1.5em;
+
+  /* height: 193px; */
+}
+
+.sb__image-area .mobile-img {
+  border-radius: 1em;
+
+  mix-blend-mode: multiply;
+}
+
+.image-wrapper-1 {
+  background: var(--clr-orange);
+  border-radius: 1em;
+}
 
 /* ================== */
 /* MEDIA QUERIES */
