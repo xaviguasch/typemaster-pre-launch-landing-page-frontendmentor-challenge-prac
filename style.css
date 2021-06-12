@@ -196,7 +196,9 @@ img {
   margin-top: 4em;
 }
 
-.sa__image-area .mobile-img {
+.sa__image-area .mobile-img,
+.sa__image-area .tablet-img,
+.sa__image-area .desktop-img {
   border-radius: 1em;
   margin-left: 1.5em;
 }
@@ -218,7 +220,9 @@ img {
   /* height: 193px; */
 }
 
-.sb__image-area .mobile-img {
+.sb__image-area .mobile-img,
+.sb__image-area .tablet-img,
+.sb__image-area .desktop-img {
   border-radius: 1em;
 
   mix-blend-mode: multiply;
@@ -294,3 +298,113 @@ img {
 /* ================== */
 /* MEDIA QUERIES */
 /* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* UTILITY STYLES */
+  .mobile-img,
+  .desktop-img {
+    display: none;
+  }
+
+  .tablet-img {
+    display: block;
+  }
+
+  .wrapper {
+    margin: 2.5em 0 0;
+  }
+
+  .container {
+    padding: 0 2.5em;
+  }
+
+  /* SECTIONS */
+
+  /* Section A */
+  .section-a {
+    display: grid;
+    grid-template-columns: 58% 62%;
+  }
+
+  .sa__image-area {
+    margin-top: 0em;
+  }
+
+  .sa__image-area .mobile-img {
+    margin-left: 0;
+  }
+
+  /* Section B */
+  .section-b {
+    margin-top: 2.5em;
+  }
+
+  .sb__image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0 2.5em;
+
+    /* height: 193px; */
+  }
+
+  .sb__copy-area {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 2.5em;
+  }
+
+  .sb__title,
+  .sb__copy-area .copy-text {
+    text-align: left;
+  }
+
+  .sb__copy-area .sb__title {
+    width: 30%;
+  }
+
+  .sb__copy-area .copy-text {
+    width: 57%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Section C */
+  .section-c {
+    margin-top: 4.25em;
+    padding: 0 2.5em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .sc__item {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-top: 4.5em;
+  }
+
+  .sc__title {
+    width: 55%;
+    text-align: left;
+  }
+
+  .sc__item .copy-text {
+    text-align: left;
+    width: 81%;
+  }
+
+  .footer {
+    margin-top: 8.75em;
+    padding-bottom: 3em;
+  }
+}
