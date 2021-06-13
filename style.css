@@ -408,3 +408,158 @@ img {
     padding-bottom: 3em;
   }
 }
+
+/* Widescreen */
+@media (min-width: 1440px) {
+  /* TYPOGRAPHY */
+  .sa__title {
+    font-size: var(--fs-56);
+  }
+
+  .copy-text {
+    font-size: var(--fs-18);
+  }
+
+  .sc__item .copy-text {
+    font-size: var(--fs-16);
+  }
+
+  /* UTILITY STYLES */
+  .mobile-img,
+  .tablet-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
+  .wrapper {
+    margin: 3.5em 0 0;
+  }
+
+  .container {
+    padding: 0em;
+  }
+
+  /* SECTIONS */
+
+  .header {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .section-a {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    margin-top: 5em;
+
+    grid-template-columns: 51% 49%;
+
+    position: relative;
+  }
+
+  .section-a::after {
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(115%);
+
+    background: var(--clr-grey);
+    border-radius: 2em;
+    height: 50%;
+    width: 200px;
+  }
+
+  .sa__copy-area {
+    width: 80%;
+  }
+
+  .sa__button-area {
+    justify-content: flex-start;
+    gap: 2.5em;
+  }
+
+  .sa__image-area .desktop-img {
+    margin-left: 0em;
+  }
+
+  /* Section B */
+  .section-b {
+    max-width: 1110px;
+    margin: 2.5em auto 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+  }
+
+  .section-b::after {
+    content: '';
+
+    /* Position */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-115%);
+
+    background: var(--clr-grey);
+    border-radius: 2em;
+    height: 50%;
+    width: 200px;
+  }
+
+  .sb__image-area {
+    padding: 0;
+  }
+
+  .sb__copy-area {
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    width: 66%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .sb__copy-area .sb__title,
+  .sb__copy-area .copy-text {
+    width: 77%;
+  }
+
+  .sb__copy-area .copy-text {
+    margin-top: 1.5em;
+  }
+
+  .section-c {
+    max-width: 1110px;
+    margin: 10.5em auto 0;
+    padding: 0;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.9em;
+  }
+
+  .sc__item {
+    margin-top: 0;
+  }
+
+  .sc__title {
+    width: 70%;
+  }
+
+  .sc__item .copy-text {
+    width: 100%;
+  }
+}
